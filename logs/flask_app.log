@@ -1,0 +1,5 @@
+2025-05-29 14:04:28,047 INFO: Flask application startup [in /home/anuj-omer/Desktop/test/testflask/app.py:26]
+2025-05-29 14:04:28,049 INFO: Starting Flask application on port 5000 [in /home/anuj-omer/Desktop/test/testflask/app.py:334]
+2025-05-29 14:04:49,970 INFO: GET /api/users - Fetching all users [in /home/anuj-omer/Desktop/test/testflask/app.py:228]
+2025-05-29 14:04:52,649 INFO: GET /api/users/1 - Fetching user [in /home/anuj-omer/Desktop/test/testflask/app.py:238]
+2025-05-29 14:04:56,465 INFO: GET /api/users/1 - Fetching user [in /home/anuj-omer/Desktop/test/testflask/app.py:238]

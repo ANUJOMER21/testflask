@@ -1,13 +1,24 @@
 #!/bin/bash
 
-# Navigate to project directory
-cd /path/to/your-repo
 
-# Pull latest changes from GitHub
-git pull origin main
+# Fetch latest changes from GitHub
+git fetch origin
 
-# Rebuild Docker image
-docker-compose build --no-cache
+# Check if there are new changes in the main branch
+LOCAL=$(git rev-parse HEAD)
+REMOTE=$(git rev-parse origin/main)
 
-# Redeploy with zero downtime
-docker-compose up -d --no-deps --build flask-app
+if [ "$LOCAL" != "$REMOTE" ]; then
+    echo "New changes detected, pulling updates..."
+    git pull origin main
+
+    # Rebuild Docker image
+    docker compose build --no-cache
+
+    # Redeploy with zero downtime
+    docker compose up -d --no-deps --build flask-app
+
+    echo "Update completed at $(date)"
+else
+    echo "No changes detected at $(date)"
+fi

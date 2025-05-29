@@ -55,7 +55,7 @@ HOME_TEMPLATE = """
 </head>
 <body>
     <div class="container">
-        <h1>🐳  Flask Docker  Updated from other system</h1>
+        <h1>🐳  Flask Docker </h1>
         
         <div class="status">
             <strong>✅ Application Status:</strong> Running successfully in Docker!<br>

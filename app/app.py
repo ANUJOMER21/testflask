@@ -203,7 +203,7 @@ def home():
     """Home page with application info and API documentation"""
     return render_template_string(HOME_TEMPLATE, 
                                 current_time=datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
-                                version="1.0.0",
+                                version="1.1.0",
                                 environment=os.environ.get('FLASK_ENV', 'production'))
 
 @app.route('/health')
@@ -212,7 +212,7 @@ def health():
     return jsonify({
         "status": "healthy",
         "timestamp": datetime.datetime.now().isoformat(),
-        "version": "1.0.0",
+        "version": "1.1.0",
         "environment": os.environ.get('FLASK_ENV', 'production'),
         "uptime": "running"
     })

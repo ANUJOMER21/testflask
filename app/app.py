@@ -203,7 +203,7 @@ def home():
     """Home page with application info and API documentation"""
     return render_template_string(HOME_TEMPLATE, 
                                 current_time=datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
-                                version="1.3.0",
+                                version="1.4.0",
                                 environment=os.environ.get('FLASK_ENV', 'production'))
 
 @app.route('/health')

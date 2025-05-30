@@ -62,6 +62,7 @@ HOME_TEMPLATE = """
             <strong>🕐 Server Time:</strong> {{ current_time }}<br>
             <strong>🔄 Version:</strong> {{ version }}<br>
             <strong>🌍 Environment:</strong> {{ environment }}
+            <strong> Updated from seconsystem </strong>
         </div>
 
         <div class="api-list">
